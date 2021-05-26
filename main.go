@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"path/filepath"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -69,8 +70,17 @@ func main() {
 	//publishRecordsData,_ :=json.Marshal(publishRecords)
 	//WriteWithIoutil("所有年份链接及发布日期",publishRecordsData)
 
-	data, _ := GetProvinceUrlAndData("http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2020/")
-	fmt.Println(data)
+	//data, _ := GetProvinceUrlAndData("http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2020/")
+	//fmt.Println(data)
+	HasLetter("11")
+
+
+}
+
+func HasLetter(s string) {
+	reg := regexp.MustCompile(`[a-zA-Z]`)
+	matchString := reg.MatchString(s)
+	fmt.Println(matchString)
 
 }
 
