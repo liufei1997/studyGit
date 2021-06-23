@@ -3,13 +3,17 @@ package main
 import (
 	"archive/zip"
 	"bytes"
+	"crypto/rand"
+	"crypto/sha256"
 	"encoding/csv"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"git.in.codoon.com/backend/common/clog"
 	"git.in.codoon.com/backend/common/thirdutil"
 	"git.in.codoon.com/backend/system_service/models"
 	"git.in.codoon.com/third/pinyin/pinyin"
+	"git.in.codoon.com/third/uuid"
 	"github.com/gocolly/colly"
 	"github.com/gocolly/colly/extensions"
 	"io"
@@ -20,6 +24,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -126,12 +131,170 @@ type ActiveMainSt struct {
 
 }
 
+var map1 map[string]string
+
 type CsvFile struct {
 	Name string
 	Data []byte
 }
 
+type People struct {
+	id   int
+	Name string
+}
+
+func randString(n int) string {
+	h := sha256.New()
+	io.WriteString(h, uuid.New())
+	sum := h.Sum(nil)
+	str := hex.EncodeToString(sum)
+	if len(str) < n {
+		return str
+	}
+	return str[:n]
+}
+
+type UUID []byte
+
+// New returns a new random (version 4) UUID as a string.  It is a convenience
+// function for NewRandom().String().
+func New() string {
+	return NewRandom().String()
+}
+
+// String returns the string form of uuid, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+// , or "" if uuid is invalid.
+func (uuid UUID) String() string {
+	if uuid == nil || len(uuid) != 16 {
+		return ""
+	}
+	b := []byte(uuid)
+	return fmt.Sprintf("%08x-%04x-%04x-%04x-%012x",
+		b[:4], b[4:6], b[6:8], b[8:10], b[10:])
+}
+
+func NewRandom() UUID {
+	uuid := make([]byte, 16)
+	randomBits([]byte(uuid))
+	uuid[6] = (uuid[6] & 0x0f) | 0x40 // Version 4
+	uuid[8] = (uuid[8] & 0x3f) | 0x80 // Variant is 10
+	return uuid
+}
+
+// randomBits completely fills slice b with random data.
+func randomBits(b []byte) {
+	if _, err := io.ReadFull(rander, b); err != nil {
+		panic(err.Error()) // rand should never fail
+	}
+}
+
+var rander = rand.Reader // random function
+
+func modify(arr [3]int) {
+	arr[0] = 100
+	fmt.Println(arr) // [100 2 3]
+}
+
+func print1() {
+	//defer waitGroup.Done()
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
+}
+
+func print2() {
+	defer waitGroup.Done()
+	for i := 5; i < 10; i++ {
+		fmt.Println(i)
+	}
+}
+
+var waitGroup sync.WaitGroup
+
 func main() {
+
+
+	n := 234
+	sInt := fmt.Sprintf("%02d", n)
+	fmt.Println(sInt)
+
+
+	//ch := make(chan int)
+	//go func() {
+	//	for i := 0; i < 5; i++ {
+	//		ch <- i
+	//	}
+	//}()
+	//
+	//for data := range ch {
+	//	fmt.Println(data)
+	//	if data == 4 {
+	//		break
+	//	}
+	//}
+	//fmt.Println("程序结束")
+	//ch := make(chan int)
+	//ch <- 1
+
+	//temp:= <-ch
+
+	//fmt.Println(temp)
+
+	//waitGroup.Add(1)
+	//go print1()
+	////waitGroup.Add(1)
+	////go print2()
+	////waitGroup.Add(1)
+	////go print3()
+	////waitGroup.Wait()
+	//time.Sleep(5 * time.Second)
+	//
+	//waitGroup.Wait()
+
+}
+
+func printNum() {
+	fmt.Println(111)
+}
+
+func print3() {
+	defer waitGroup.Done()
+	for i := 10; i < 15; i++ {
+		fmt.Println(i)
+	}
+}
+
+func main1() {
+
+	//str := randString(32)
+	//fmt.Println(str)
+
+	//x := [3]int{1, 2, 3}
+	//
+	//modify(x)
+	//fmt.Println(x)
+
+	//x[1] = 100
+	//
+	//fmt.Println(x)
+
+	//fmt.Println("11111")
+	//go func() {
+	//	map1["a"] = "1a"
+	//	fmt.Println("mpa",map1["a"])
+	//	for k, v := range map1 {
+	//		fmt.Printf("key:%s value:%d \n", k, v)
+	//	}
+	//}()
+	//go func() {
+	//	map1["a"] = "2a"
+	//	map1["b"] = "2a"
+	//	//delete(map1,"a")
+	//	fmt.Println(map1)
+	//}()
+	//
+	//fmt.Println(map1["a"],"结果")
+
 	//data, _ := GetProvinceUrlAndData("http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2020/")
 	//fmt.Println(data)
 	//
@@ -188,10 +351,6 @@ func main() {
 	//var aaa [][]string
 	//aaa =append(aaa,[]string{"111","111","222"})
 	//CreateCSV("aaa.csv",aaa)
-
-
-
-
 
 	//m3u8_dir_path := "13429235688@01@05@09"
 	//data := strings.Split(m3u8_dir_path, "@")
@@ -270,24 +429,69 @@ func main() {
 	//fileUrl, err := PutZipToOss(zipData, fileName)
 	//fmt.Println(fileUrl)
 
+	//title := []string{"1","2", "3"}
+	//var rows [][]string
+	//rows = append(rows,[]string{"a","b","c"})
+	//rows = append([][]string{title}, rows...)
+	//fmt.Println(rows)
+	//
+	//generateCSV("csv111",rows)
 
-	title := []string{"1","2", "3"}
-	var rows [][]string
-	rows = append(rows,[]string{"a","b","c"})
-	rows = append([][]string{title}, rows...)
-	fmt.Println(rows)
+	//fmt.Println(time.Unix(1389058332, 0).Format("2006-01-02 15:04:05")）
+	//fmt.Println(111)
 
-	generateCSV("csv111",rows)
+	//const Baseormat = "2006-01-02 15:04:05"
+	//
+	//formatTime := time.Now().Format(Baseormat)
+	//fmt.Println(formatTime)
+	//fmt.Printf("type:%T\n", formatTime)
 
+	//var str string = "高德"
+	//var data []byte = []byte(str)
+	//fmt.Println(data)
 
+	//s1 := fmt.Sprintf("if block saveCountyErr error:%s", "sdfs防守打法")
+	//fmt.Println(s1)
 
+}
+
+var tenToOther map[int]string = map[int]string{0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9", 10: "a", 11: "b", 12: "c", 13: "d", 14: "e", 15: "f", 16: "g", 17: "h", 18: "i", 19: "j", 20: "k", 21: "l", 22: "m", 23: "n", 24: "o", 25: "p", 26: "q", 27: "r", 28: "s", 29: "t", 30: "u", 31: "v"}
+
+func HexadecimalConversion(num, n int) string {
+	newNumStr := ""
+	var remainder int
+	var remainderString string
+	for num != 0 {
+		remainder = num % n
+		remainderString = tenToOther[remainder]
+		newNumStr = remainderString + newNumStr
+		num = num / n
+	}
+	return newNumStr
+}
+
+// 10进制转任意进制
+func decimalToAny(num, n int) string {
+	new_num_str := ""
+	var remainder int
+	var remainder_string string
+	for num != 0 {
+		remainder = num % n
+		if 76 > remainder && remainder > 9 {
+			remainder_string = tenToOther[remainder]
+		} else {
+			remainder_string = strconv.Itoa(remainder)
+		}
+		new_num_str = remainder_string + new_num_str
+		num = num / n
+	}
+	return new_num_str
 }
 
 func PutZipToOss(data []byte, fileName string) (string, error) {
 	filUrl, err := thirdutil.DefaultOssClient.PutU(fileName, data)
 	return filUrl, err
 }
-
 
 func BytesZip(files []CsvFile) ([]byte, error) {
 	buff := new(bytes.Buffer)
@@ -342,14 +546,14 @@ func generateCSV(csvName string, rows [][]string) ([]byte, error) {
 }
 
 //生成csv文件
-func CreateCSV(txtname string,title [][]string)  {
-	f , err := os.Create(txtname)
-	if err != nil{
+func CreateCSV(txtname string, title [][]string) {
+	f, err := os.Create(txtname)
+	if err != nil {
 		panic(err)
 	}
 	defer f.Close()
 	f.WriteString("\xEF\xBB\xBF")
-	w:=csv.NewWriter(f)
+	w := csv.NewWriter(f)
 	w.WriteAll(title)
 	w.Flush()
 }

@@ -302,6 +302,8 @@ git.in.codoon.com/third/snappy v0.0.0-20200331102324-efa7634832d3 h1:uZFlG0dSg5B
 git.in.codoon.com/third/snappy v0.0.0-20200331102324-efa7634832d3/go.mod h1:0ObCgCystQTQ7re1UwZP5IJUO/KD6gUetsDSXRWf0cQ=
 git.in.codoon.com/third/upyun v0.0.0-20200331102342-b9b47dbc8ae1 h1:m3etgRqCk/ipouz9/Ir7gL1X4/jeCVs87as3v5NovA0=
 git.in.codoon.com/third/upyun v0.0.0-20200331102342-b9b47dbc8ae1/go.mod h1:zTWjFaI6dPHESMD4oroAd5LxmE0AnRBfdrcRW3UoH+E=
+git.in.codoon.com/third/uuid v0.0.0-20200331102343-3dadab925980 h1:tmkCIF2Ky60hSDEHFMnyx1mG3EzpuybfUx9cXcNBLMk=
+git.in.codoon.com/third/uuid v0.0.0-20200331102343-3dadab925980/go.mod h1:JqlkSiEH0uSeEjPwqMWa7FdQ/u4xhNMbwfIgChTJUxA=
 git.in.codoon.com/third/xlsx_v2 v0.0.0-20200331102354-fec82e5bc549 h1:VENGaQuZTml2kBeF42t7auDPeVM7ieRhZhOzJQeoOoU=
 git.in.codoon.com/third/xlsx_v2 v0.0.0-20200331102354-fec82e5bc549/go.mod h1:szBATh+N4PdXEATY7ETxK4pi9Dd3T1zwXsYgldBMzp0=
 git.in.codoon.com/third/xxHash/xxHash32 v0.0.0-20200331102959-be4fc98e942f h1:wc617FAJWawf6HkFReN6zXZ5VWHr/lUQWQo2aHAgfNY=
@@ -442,6 +444,7 @@ github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvW
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/klauspost/compress v1.12.2 h1:2KCfW3I9M7nSc5wOqXAlW2v2U6v+w6cbjvbfp+OykW8=
 github.com/klauspost/compress v1.12.2/go.mod h1:8dP1Hq4DHOhN9w426knH3Rhby4rFm6D8eO+e+Dq5Gzg=
+github.com/klauspost/compress v1.13.0 h1:2T7tUoQrQT+fQWdaY5rjWztFGAFwbGD04iPJg90ZiOs=
 github.com/klauspost/crc32 v0.0.0-20161016154125-cb6bfca970f6/go.mod h1:+ZoRqAPRLkC4NPOvfYeR5KNOrY6TD+/sAC3HXPZgDYg=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1 h1:mweAR1A6xJ3oS2pRaGiHgQ4OO8tzTaLawm8vnODuwDk=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=

@@ -7,7 +7,7 @@ require (
 	git.in.codoon.com/backend/system_service v0.0.0-20210401090231-b13aaac6a105
 	git.in.codoon.com/third/context v0.0.0-20200401053909-4c3008b5cf79 // indirect
 	git.in.codoon.com/third/etcd/pkg/testutil v0.0.0-20200409060612-d4ce68b4f25d // indirect
-	git.in.codoon.com/third/gin v0.0.0-20200331102141-b56734d01bd6
+	git.in.codoon.com/third/gin v0.0.0-20200331102141-b56734d01bd6 // indirect
 	git.in.codoon.com/third/gin/binding v0.0.0-20200331102141-b56734d01bd6 // indirect
 	git.in.codoon.com/third/gin/render v0.0.0-20200331102141-b56734d01bd6 // indirect
 	git.in.codoon.com/third/go-colorable v0.0.0-20200331102151-42fd58b90add // indirect
@@ -32,6 +32,7 @@ require (
 	git.in.codoon.com/third/sarama_1.26/testify/require v0.0.0-20200604024659-dbe3dcaac7c3 // indirect
 	git.in.codoon.com/third/sarama_1.26/toxiproxy/client v0.0.0-20200604024659-dbe3dcaac7c3 // indirect
 	git.in.codoon.com/third/sarama_1.26/yaml v0.0.0-20200604024659-dbe3dcaac7c3 // indirect
+	git.in.codoon.com/third/uuid v0.0.0-20200331102343-3dadab925980
 	github.com/PuerkitoBio/goquery v1.6.1 // indirect
 	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
 	github.com/StackExchange/wmi v0.0.0-20210224194228-fe8f1750fd46 // indirect
