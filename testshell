@@ -1,0 +1,15 @@
+    a
+    aaa
+    xxxxccc
+	gitlab
+	git.in.codoon.com/backend/serverapi/gps_api v0.0.0-20210705054134-b7c250f1178a
+
+require (
+)
+sed  -i '' '/^[ \t]*git\.in\.codoon\.com\/third\/go\-sql\-driver\/mysql.*/d' testshell
+module git.in.codoon.com/backend/training_plan_v3
+
+go 1.15
+sssss
+	git.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286
+
