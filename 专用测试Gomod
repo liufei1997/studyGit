@@ -1,0 +1,27 @@
+module studyGit
+
+go 1.15
+
+require (
+	git.in.codoon.com/third/go-sql-driver/mysql v0.0.0-20200331102911-a306291ef63e
+    git.in.codoon.com/backend/common v0.0.0-20210603085416-deafb063545d
+	git.in.codoon.com/backend/framework v0.0.0-20200911021505-c269a9a21481
+	git.in.codoon.com/backend/serverapi v0.0.0-20210201060928-3077c90ee0a7
+	git.in.codoon.com/backend/serverapi/active_city_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/advert v0.0.0-20210203055248-06fddb6d9ec9
+	git.in.codoon.com/backend/serverapi/cardserver_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/check_dirty v0.0.0-20210604094735-0db0dbc25f93
+	git.in.codoon.com/backend/serverapi/city_code v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/draw_server_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/equipment_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/feedserver_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/gps_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/hot_zone_server v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/mallapi v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/mns_api v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/relation_chain/user_relation v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/share_center v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/sports_sort_server v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20200911061425-6d3f2e0847fc
+	git.in.codoon.com/backend/serverapi/wechat_mini_app v0.0.0-20200911061425-6d3f2e0847fc
+）
