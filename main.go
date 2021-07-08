@@ -282,7 +282,7 @@ type Test struct {
 }
 
 func main() {
-	a:= "\tgit.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286"
+	// a:= "\tgit.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286"
 	//var slice []int
 	//slice[1] = 0
 
