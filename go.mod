@@ -3,37 +3,37 @@ module studyGit
 go 1.15
 
 require (
-git.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286
-	git.in.codoon.com/backend/framework v0.0.0-20201012020735-ac15b8d436fd // indirect
+	git.in.codoon.com/backend/common v0.0.0-20210702104524-7c7f4f773c49
+	git.in.codoon.com/backend/framework v0.0.0-20210705055424-a9a890125198 // indirect
 	git.in.codoon.com/backend/jsonrpc v0.0.0-20200423070224-aecd90a7ae72 // indirect
 	git.in.codoon.com/backend/rpc v0.0.0-20200423070202-931c7a68cfbd // indirect
-	git.in.codoon.com/backend/serverapi v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/check_dirty v0.0.0-20210604094735-0db0dbc25f93
-	git.in.codoon.com/backend/serverapi/codoon_race v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/codoon_tieba_v2_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/dataserver v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/equipment_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/feedserver_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/frequency_control v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/give_medal v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/gomore-api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/gps_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/hot_zone_server v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/login_in v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/mallapi v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/member_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/mns_api v0.0.0-20210425030215-3a59af235b94 // indirect
-	git.in.codoon.com/backend/serverapi/msg_api v0.0.0-20210425030215-3a59af235b94 // indirect
-	git.in.codoon.com/backend/serverapi/pb_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/relation_chain/user_relation v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/share_center v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/sports_exam v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/sportslevel v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/training_plan_base_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/training_plan_v2_api v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/ucenter v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/userinfo_center v0.0.0-20210425030215-3a59af235b94
-	git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20210425030215-3a59af235b94
+	git.in.codoon.com/backend/serverapi v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/check_dirty v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/codoon_race v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/codoon_tieba_v2_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/dataserver v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/equipment_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/feedserver_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/frequency_control v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/give_medal v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/gomore-api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/gps_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/hot_zone_server v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/login_in v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/mallapi v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/member_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/mns_api v0.0.0-20210705054134-b7c250f1178a // indirect
+	git.in.codoon.com/backend/serverapi/msg_api v0.0.0-20210705054134-b7c250f1178a // indirect
+	git.in.codoon.com/backend/serverapi/pb_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/relation_chain/user_relation v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/share_center v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/sports_exam v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/sportslevel v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/training_plan_base_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/training_plan_v2_api v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/ucenter v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/userinfo_center v0.0.0-20210705054134-b7c250f1178a
+	git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20210705054134-b7c250f1178a
 	git.in.codoon.com/codoon_mall/alert v0.0.0-20170707060403-1de75e52d6b6 // indirect
 	git.in.codoon.com/codoon_mall/http-recover v0.0.0-20200421095720-5ac16d5b8448 // indirect
 	git.in.codoon.com/codoon_mall/xcommon v0.0.0-20210419063838-0ea9c8c4a1c5
@@ -64,12 +64,11 @@ git.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286
 	git.in.codoon.com/third/go-metrics v0.0.0-20200331102202-685cf2d9773b // indirect
 	git.in.codoon.com/third/go-resiliency/breaker v0.0.0-20200331102846-bcb70885e7e4 // indirect
 	git.in.codoon.com/third/go-spew/spew v0.0.0-20200331102900-5bbd30c34478 // indirect
-	git.in.codoon.com/third/go-sql-driver/mysql v0.0.0-20200331102911-a306291ef63e // indirect
 	git.in.codoon.com/third/go-xerial-snappy v0.0.0-20200331102213-46a4796787f3 // indirect
 	git.in.codoon.com/third/go.uuid v1.2.0 // indirect
 	git.in.codoon.com/third/golang.org/x/net/http2 v0.0.0-20200421021357-cf13fb474bce // indirect
 	git.in.codoon.com/third/golang.org/x/net/http2/hpack v0.0.0-20200421021357-cf13fb474bce // indirect
-	git.in.codoon.com/third/gorm v0.0.0-20200331102228-92a483bf57a2
+	git.in.codoon.com/third/gorm v0.0.0-20210705083209-799f58fce370
 	git.in.codoon.com/third/goroutine v0.0.0-20200331102230-c912e6db4d6a // indirect
 	git.in.codoon.com/third/goroutineid v0.0.0-20200717063048-b6accc6b85f6 // indirect
 	git.in.codoon.com/third/http_client_cluster v0.0.0-20200922064940-834b3323a368 // indirect
@@ -221,9 +220,7 @@ git.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286
 	github.com/onsi/ginkgo v1.16.4 // indirect
 	github.com/onsi/gomega v1.13.0 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
-	github.com/shirou/gopsutil v3.21.3+incompatible // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
-	github.com/tklauser/go-sysconf v0.3.5 // indirect
 	gopkg.in/jcmturner/aescts.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/dnsutils.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/goidentity.v3 v3.0.0 // indirect
