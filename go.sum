@@ -14,10 +14,15 @@ git.in.codoon.com/backend/serverapi v0.0.0-20200911061425-6d3f2e0847fc h1:L1XF0d
 git.in.codoon.com/backend/serverapi v0.0.0-20200911061425-6d3f2e0847fc/go.mod h1:/2yZThc8ll4+BAFZN5Fqo+A6IAtytoL3lOVWnfwOr44=
 git.in.codoon.com/backend/serverapi v0.0.0-20210602062937-49954c66fdd2/go.mod h1:/2yZThc8ll4+BAFZN5Fqo+A6IAtytoL3lOVWnfwOr44=
 git.in.codoon.com/backend/serverapi v0.0.0-20210705054134-b7c250f1178a/go.mod h1:/2yZThc8ll4+BAFZN5Fqo+A6IAtytoL3lOVWnfwOr44=
+git.in.codoon.com/backend/serverapi/active_city_api v0.0.0-20210705054134-b7c250f1178a/go.mod h1:PtoMcBbnl09/G4Lmx/dddo5aJ3eDiAB6jMEfZ9jXs6M=
+git.in.codoon.com/backend/serverapi/advert v0.0.0-20210705054134-b7c250f1178a/go.mod h1:Q8jxn7Ipv3QFkQXEZ44odxwbRtnYvHJIsovOAkX19EQ=
+git.in.codoon.com/backend/serverapi/cardserver_api v0.0.0-20210705054134-b7c250f1178a/go.mod h1:ndZh6gQMT/VDpxuhAQMhP6jJPfl4P9RkV+My9qmLbSs=
 git.in.codoon.com/backend/serverapi/check_dirty v0.0.0-20210705054134-b7c250f1178a/go.mod h1:IsR4WgvLgNwYqiglJ/9cn+L07X/fDSrHOBsKZX7DIIs=
+git.in.codoon.com/backend/serverapi/city_code v0.0.0-20210705054134-b7c250f1178a/go.mod h1:22amACQobHPZeSPzvrW4RN2KLtoGztlGC/8DR6mBKAI=
 git.in.codoon.com/backend/serverapi/codoon_race v0.0.0-20210705054134-b7c250f1178a/go.mod h1:IoK0LakZDV/VYOSq3GARm82cq8YnPxY7FwTdu15+hw4=
 git.in.codoon.com/backend/serverapi/codoon_tieba_v2_api v0.0.0-20210705054134-b7c250f1178a/go.mod h1:VIhGr7wXQMeN/llW3hNfNBmCtAeIgwRqRZ0oykOH0eI=
 git.in.codoon.com/backend/serverapi/dataserver v0.0.0-20210705054134-b7c250f1178a/go.mod h1:0MiIZx1Woyh5QUjYpVDgMAwoadbvbVudDw7mzd0Dcwo=
+git.in.codoon.com/backend/serverapi/draw_server_api v0.0.0-20210705054134-b7c250f1178a/go.mod h1:97rOgYidJ+cYOhWTUSSv+Gse+5mA7S7ukQuLhKzLcD4=
 git.in.codoon.com/backend/serverapi/equipment_api v0.0.0-20210705054134-b7c250f1178a/go.mod h1:5jhQXTI/8sPNkrQwYgpAlePmnaYwKKoaON/kEsIk/PY=
 git.in.codoon.com/backend/serverapi/feedserver_api v0.0.0-20200911061425-6d3f2e0847fc h1:MTaY6a0vkfqHuCv4sGu93mCziTtIcnnfRsKF0JlzruM=
 git.in.codoon.com/backend/serverapi/feedserver_api v0.0.0-20200911061425-6d3f2e0847fc/go.mod h1:KSgQ2DyOekezgYYEJGFHiddycUDJD6inIjDwffUmK7U=
@@ -56,6 +61,7 @@ git.in.codoon.com/backend/serverapi/share_center v0.0.0-20210705054134-b7c250f11
 git.in.codoon.com/backend/serverapi/sms v0.0.0-20210316101507-da82e8a5de1d h1:lEwNvlDugxygJdIsoqpDD60AE+y95l9Y/yaFa1agI1E=
 git.in.codoon.com/backend/serverapi/sms v0.0.0-20210316101507-da82e8a5de1d/go.mod h1:L7XrgnRGLgSMbK1LSSoUj/OA2s64qYAJWD96+yv6EyU=
 git.in.codoon.com/backend/serverapi/sports_exam v0.0.0-20210705054134-b7c250f1178a/go.mod h1:GFSGhjnqPpb4a/w9mX/0nbDxjZUzA+68h002dEQomF8=
+git.in.codoon.com/backend/serverapi/sports_sort_server v0.0.0-20210705054134-b7c250f1178a/go.mod h1:7quV3lE2+41ncExuSjJhY/VoVISRzpbiq7LNLs0srmY=
 git.in.codoon.com/backend/serverapi/sportslevel v0.0.0-20200911061425-6d3f2e0847fc h1:wJQ/U2Dee0PdU1HfFPnGLSo4ULtocDfBaCb0zxpYIKA=
 git.in.codoon.com/backend/serverapi/sportslevel v0.0.0-20200911061425-6d3f2e0847fc/go.mod h1:k/PwdHcgekFcia6le6ld6xrRYIUCZquD8FGmHGYb9gA=
 git.in.codoon.com/backend/serverapi/sportslevel v0.0.0-20210705054134-b7c250f1178a/go.mod h1:k/PwdHcgekFcia6le6ld6xrRYIUCZquD8FGmHGYb9gA=
@@ -68,6 +74,7 @@ git.in.codoon.com/backend/serverapi/userinfo_center v0.0.0-20210705054134-b7c250
 git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20200911061425-6d3f2e0847fc h1:LdwoYqpHIeGhLE4gR6CZngyyA6/jxKi3sE3JEe8XVwY=
 git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20200911061425-6d3f2e0847fc/go.mod h1:V8Kazw0AxwXncqPT4kppM3fDC7l5wvy37wUzbDtk6Pc=
 git.in.codoon.com/backend/serverapi/userprofile v0.0.0-20210705054134-b7c250f1178a/go.mod h1:VOr++nSjqOamFAiI8RoFpOjc5w8G/vhGqKgM2g2kcxA=
+git.in.codoon.com/backend/serverapi/wechat_mini_app v0.0.0-20210705054134-b7c250f1178a/go.mod h1:9Ai/S2kl99OqyVfpwPXvcb/7Z2U4zy/5Boxijc1nbQc=
 git.in.codoon.com/backend/system_service v0.0.0-20210401090231-b13aaac6a105 h1:xFNw7GsZ6xVJwVqkT8p0dcHDpLZpgWDv4huorU89ONE=
 git.in.codoon.com/backend/system_service v0.0.0-20210401090231-b13aaac6a105/go.mod h1:4QbOmU6+QTpF2H0y0stHSiOUTawJvGidklsTnV6xqxg=
 git.in.codoon.com/codoon_mall/alert v0.0.0-20170707060403-1de75e52d6b6/go.mod h1:QUCyrymGME98dqxJdelWbyZaN3U/APjdH6qpvyVOiQE=
@@ -86,6 +93,9 @@ git.in.codoon.com/third/context v0.0.0-20200401053909-4c3008b5cf79 h1:nA6wJegcj/
 git.in.codoon.com/third/context v0.0.0-20200401053909-4c3008b5cf79/go.mod h1:rF+VwUKeKR8L2Dw01+jMjztMHqXvcdidh3jIg+xC18c=
 git.in.codoon.com/third/crc32 v0.0.0-20200401030510-4553cb28d416 h1:n4H1k9s6gNJqUtiJlsmzLByQAR4lSLLZk9aSAqgYdPY=
 git.in.codoon.com/third/crc32 v0.0.0-20200401030510-4553cb28d416/go.mod h1:SOwPOaMQlw+aOdBIK+x1LJzWTgIhlWZ9GDS6Xqpzdnw=
+git.in.codoon.com/third/elastic.v5 v0.0.0-20200331102124-afc3069ae5eb/go.mod h1:POnFq5dSlpUpZfsb4SkfFAtYNmA19j8eMjkTLJq+AEk=
+git.in.codoon.com/third/elastic.v5/backoff v0.0.0-20200331102124-afc3069ae5eb/go.mod h1:1XVHkNNe0ObKfQQxoV8TtBzbFpe2sMGyD5HTeR18LCk=
+git.in.codoon.com/third/elastic.v5/uritemplates v0.0.0-20200331102124-afc3069ae5eb/go.mod h1:TTVg9Ez9GELhLoj1j+OlZPLjYhQ62stGJVlxVg/d2bk=
 git.in.codoon.com/third/etcd v0.5.0-alpha.5 h1:XbSomEwhehwrXOim2ECWwskMh9yO0cYgdp9IcYbP78k=
 git.in.codoon.com/third/etcd v2.2.5+incompatible h1:645OFOv3k+b53i0O7QDO+wjCtVqztp5ZOqfXOAsYyjA=
 git.in.codoon.com/third/etcd-client v0.0.0-20200909103706-1364dbdb1d5c h1:2Wzn4XnjkTer1vVcFK+KY4AvcSr0ejHMHPYcLQbw7cE=
@@ -121,6 +131,13 @@ git.in.codoon.com/third/go-logging v0.0.0-20200331102200-9289b86becf2 h1:1nIH+S1
 git.in.codoon.com/third/go-logging v0.0.0-20200331102200-9289b86becf2/go.mod h1:t5RTTpIqSwBEGCaSlvvqJxUA2HJ9+2YqBSHeSLngXCo=
 git.in.codoon.com/third/go-metrics v0.0.0-20200331102202-685cf2d9773b h1:NbmBghN+lQ0/+sTMef7FbaxVqNpG6kg3qPrwaqe7OHI=
 git.in.codoon.com/third/go-metrics v0.0.0-20200331102202-685cf2d9773b/go.mod h1:GgZ5dm9NNZThNMd4fCsd2UdX428SWV+BRUhSB8PBvDw=
+git.in.codoon.com/third/go-redis v0.0.0-20200407064757-2f472a72624c/go.mod h1:MIjwtwecASskoa6rh7LFz5KyVSXot+K3I+keMuu+H5k=
+git.in.codoon.com/third/go-redis/internal v0.0.0-20200407064757-2f472a72624c/go.mod h1:EmL0teSZ2YCqBpZOZX8f0mydSIv3424ZCCNYcLLgcFI=
+git.in.codoon.com/third/go-redis/internal/consistenthash v0.0.0-20200407064757-2f472a72624c/go.mod h1:dpcYNjoSh594DCGRTBGml1t9iPbPpyCTkE4ATE67NMI=
+git.in.codoon.com/third/go-redis/internal/hashtag v0.0.0-20200407064757-2f472a72624c/go.mod h1:S3UN0jEo6kAbh1wPF3aQZsl3UsyVYX197nkkJHpiLg8=
+git.in.codoon.com/third/go-redis/internal/pool v0.0.0-20200407064757-2f472a72624c/go.mod h1:9dINsxOPx5mUAStFNA9kOM4pntTf7Nyam/1YuDlRBUA=
+git.in.codoon.com/third/go-redis/internal/proto v0.0.0-20200407064757-2f472a72624c/go.mod h1:e/ykiXlLkpvol5799OBA81+G9BEZuH+X6fq7mSJRzYo=
+git.in.codoon.com/third/go-redis/internal/util v0.0.0-20200407064757-2f472a72624c/go.mod h1:BHAN5CQKqDjegGZXRheLnnjPsFS77zlZqZvko9bmqz4=
 git.in.codoon.com/third/go-resiliency/breaker v0.0.0-20200331102846-bcb70885e7e4 h1:+YBEd2Zu/yTmbe1HmOiZ8ZKIk37KkHOg/qIPy//u8tg=
 git.in.codoon.com/third/go-resiliency/breaker v0.0.0-20200331102846-bcb70885e7e4/go.mod h1:XORPBy4fHxf0uED+vwENL0oAMd8tjTCnrJ/TT0SUiZ0=
 git.in.codoon.com/third/go-simplejson v0.4.3 h1:rAd9/JieomIlUvVj0r8KkPpyHBXJaqzqBiHm3Bu8wTc=
@@ -133,6 +150,8 @@ git.in.codoon.com/third/go-xerial-snappy v0.0.0-20200331102213-46a4796787f3 h1:Y
 git.in.codoon.com/third/go-xerial-snappy v0.0.0-20200331102213-46a4796787f3/go.mod h1:+m+SlfTNMfRwATVqp2FEW4bVlULubJvxtPmhI4gaFaA=
 git.in.codoon.com/third/go.uuid v1.2.0 h1:w9P9Dzhtz092coHpMwv8MZJ0XjjNlMcMXXb4WOLHd+c=
 git.in.codoon.com/third/go.uuid v1.2.0/go.mod h1:/ibvPGBgm6neQoVXzwyPQsODb5yjJ136aw4PeA7nAdI=
+git.in.codoon.com/third/golang.org.v2/x/net/context v0.0.0-20200420093739-b1355ef02d37/go.mod h1:m83iC6elZ7E4+IyNY+P3T2N5M4HooZOioawtfLLTmv4=
+git.in.codoon.com/third/golang.org.v2/x/net/context/ctxhttp v0.0.0-20200420093739-b1355ef02d37/go.mod h1:V2b6ZaQlTJFN4JJjjc88etYrPtl85YNzOghxzrBrbEk=
 git.in.codoon.com/third/golang.org/x/net/http2 v0.0.0-20200421021357-cf13fb474bce h1:RV3bRn7oP/QluMqvjdjzGCFataYwj1hdoS6k0g1uZPw=
 git.in.codoon.com/third/golang.org/x/net/http2 v0.0.0-20200421021357-cf13fb474bce/go.mod h1:WwXR7UPUKLsyIpbgmTXTA7d53YLpcC/9n4wZwMzKykA=
 git.in.codoon.com/third/golang.org/x/net/http2/hpack v0.0.0-20200421021357-cf13fb474bce h1:96VtBFRQtkqcOG40OKELP5bHPV5XWqOSrl41LF8FiZM=
@@ -196,6 +215,7 @@ git.in.codoon.com/third/redigo/internal v0.0.0-20200401051426-418e88245970 h1:8A
 git.in.codoon.com/third/redigo/internal v0.0.0-20200401051426-418e88245970/go.mod h1:1ZmP7Rc4sQYF7RmuT97ik6iLyPRMRMoAUN+caS4f6z4=
 git.in.codoon.com/third/redigo/redis v0.0.0-20200401051426-418e88245970 h1:ellLwgm51zHvHI89b2L38aLk47e4674K+8pkoOEykDg=
 git.in.codoon.com/third/redigo/redis v0.0.0-20200401051426-418e88245970/go.mod h1:1133rhxAzlLommNFQUwvou51RuWNx508Hs9nZgYW6Tk=
+git.in.codoon.com/third/rookbox/sweet_model v0.0.0-20200331103948-2491fdbaa9fb/go.mod h1:Kc1iZQFD8VyCDU3TuoGmvr+xBK2yOB5NM5KTdkbg6KQ=
 git.in.codoon.com/third/sarama v0.0.0-20200401033751-9d1a38883991 h1:KECU95z3lO6QfGTQKjgngjhq6Ck9G+rvxS14aUrSFsw=
 git.in.codoon.com/third/sarama v0.0.0-20200401033751-9d1a38883991/go.mod h1:vfDcQ5cjgsWc+CFQQPu+R2eKJy1TXBCtCpePDzyJjnk=
 git.in.codoon.com/third/sarama-cluster v0.0.0-20200331102322-700b5c6aa6b8 h1:AffMiZS5JVfFUxk4HG4KHGX8JYa8d7UgJlHK8h//d5c=
@@ -445,6 +465,7 @@ github.com/go-kit/kit v0.8.0/go.mod h1:xBxKIO96dXMWWy0MnWVtmwkA9/13aqxPnvrjFYMA2
 github.com/go-logfmt/logfmt v0.3.0/go.mod h1:Qt1PoO58o5twSAckw1HlFXLmHsOX5/0LbT9GBnD5lWE=
 github.com/go-ole/go-ole v1.2.5 h1:t4MGB5xEDZvXI+0rMjjsfBsD7yAgp/s9ZDkL1JndXwY=
 github.com/go-ole/go-ole v1.2.5/go.mod h1:pprOEPIfldk/42T2oK7lQ4v4JSDwmV0As9GaiUsvbm0=
+github.com/go-redis/redis v6.15.9+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=
 github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0/go.mod h1:fyg7847qk6SyHyPtNmDHnmrv/HOrqktSC+C9fM+CJOE=
