@@ -26,13 +26,16 @@
 #sed -i '' '/[ \t]*git\.in\.codoon\.com\/third\/go\-sql\-driver\/mysql.*/d' testshell
 #sed -i '' '/.*git\.in\.codoon\.com\/third\/go\-sql\-driver\/mysql.*/d' testshell
 
-sed  -i '' 's/x$//' testshell
+#sed  -i '' 's/x$//' testshell
 #sed -i '' 's/git.in.codoon.com\/backend\/serverapi[\/]*/' testall
 
 
-function git.branch {
-  br=`git branch | grep "*"`
-  echo ${br/* /}
-}
+#function git.branch {
+#  br=`git branch | grep "*"`
+#  echo ${br/* /}
+#}
+#
+#git.branch
 
-git.branch
+cd /Users/codoon/go/src/studyG1it || echo "cd 失败已退出";exit;
+echo "222"
