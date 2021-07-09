@@ -40,7 +40,7 @@ checkGoModExist() {
   if [[ -f "$goModPath" ]]; then
     echo "go.mod文件存在"
     cd "$servicePath" || exit
-    git checkout -b feature/gorm_update_v13_max
+    git checkout -b feature/gorm_update_v1_max
     isSuccess
     updateGoMod
     go build
