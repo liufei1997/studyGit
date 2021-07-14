@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/md5"
 	"fmt"
 	"reflect"
 	"sync"
@@ -281,7 +282,358 @@ type Test struct {
 	User string
 }
 
+func md5s(s string) string {
+	h := md5.New()
+	h.Write([]byte(s))
+	return fmt.Sprintf("%x", h.Sum(nil))
+}
+
+type stPeople struct {
+	Gender bool
+	Name   string
+}
+
+type stStudent struct {
+	stPeople
+	Class int
+}
+
+func f1(arr ...int) {
+	fmt.Println(arr)
+}
+
+func testDefer() int {
+	var i int
+	defer func() {
+		i++
+	}()
+	i = 1
+
+	return i
+}
+
+func reverse(s []rune) []rune {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+	return s
+}
+
+type A struct {
+	s string
+}
+
+// 这是上面提到的 "在方法内把局部变量指针返回" 的情况
+func foo(s string) *A {
+	a := new(A)
+	a.s = s
+	return a //返回局部变量a,在C语言中妥妥野指针，但在go则ok，但a会逃逸到堆
+}
+
+var ch = make(chan int)
+
+func print5(i int) {
+	<-ch
+	fmt.Println(i)
+}
+
+func g11(ch chan int, wg *sync.WaitGroup) {
+	defer func() {
+		wg.Done()
+	}()
+	for i := 1; i < 10; i++ {
+		ch <- i
+		if i%2 != 0 {
+			fmt.Println("g1 => ", i)
+		}
+	}
+}
+
+func g21(ch chan int, wg *sync.WaitGroup) {
+	defer func() {
+		wg.Done()
+	}()
+	for i := 1; i < 10; i++ {
+		<-ch
+		if i%2 == 0 {
+			fmt.Println("g2 => ", i)
+		}
+	}
+}
+
+var ch1 chan int
+
+func fetch(ch chan int) {
+
+	ch <- 1
+}
+
+func set(ch chan int) {
+
+	out := <-ch
+	fmt.Println(out)
+}
+
+func job(index int) {
+	time.Sleep(time.Millisecond * 500)
+	fmt.Printf("执行完毕，序号:%d\n", index)
+}
+
+func go1(ch chan int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 0; i < 10; i++ {
+		ch <- i
+	}
+	close(ch)
+}
+func go2(ch chan int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 0; i < 11; i++ {
+		out := <-ch
+		fmt.Println(out)
+	}
+}
+func Increase() func() int {
+	n := 0
+	return func() int {
+		n++
+		return n
+	}
+}
+
+func update(a []int) {
+	a = append(a, 1)
+}
+
 func main() {
+	s1 := make([]int, 0)
+	s2 := []int{1,2,3}
+	update(s1)
+	update(s2)
+	fmt.Println(s1)
+	fmt.Println(s2)
+
+	//bytes := []byte("aaa")
+	//fmt.Println(string(bytes))
+	//startIdStr := fmt.Sprintf("%d",1706186690)
+	//fmt.Println(startIdStr)
+
+	//in := Increase()
+	//fmt.Println(in())
+	//fmt.Println(in())
+
+	//var wg sync.WaitGroup
+	//wg.Add(2)
+	//ch := make(chan int, 10)
+	//go go1(ch, &wg)
+	//go go2(ch, &wg)
+	//wg.Wait()
+}
+
+func main1() {
+	maxNum := 10
+	pool := make(chan struct{}, maxNum)
+	var wg sync.WaitGroup
+	for i := 10; i < 100; i++ {
+		pool <- struct{}{}
+		wg.Add(1)
+		go func(index int) {
+			defer wg.Done()
+			defer func() {
+				<-pool
+			}()
+			job(index)
+		}(i)
+	}
+
+	//go set(ch1)
+	//go fetch(ch1)
+	//
+	//time.Sleep(time.Second*5)
+
+	//waitGroup.Add(2)
+	//ch := make(chan int)
+	//go g11(ch, &waitGroup)
+	//go g21(ch, &waitGroup)
+	//waitGroup.Wait()
+
+	//for i := 1; i <= 10; i ++ {
+	//	go print5(i)
+	//	ch <- 1
+	//}
+
+	//var count uint32
+	//trigger := func(i uint32, fn func()) {
+	//	for {
+	//		if n := atomic.LoadUint32(&count); n == i {
+	//			fn()
+	//			atomic.AddUint32(&count, 1)
+	//			break
+	//		}
+	//		time.Sleep(time.Nanosecond)
+	//	}
+	//}
+	//for i := uint32(0); i < 10; i++ {
+	//	go func(i uint32) {
+	//		fn := func() {
+	//			fmt.Println(i)
+	//		}
+	//		trigger(i, fn)
+	//	}(i)
+	//}
+	//trigger(10, func() {})
+
+	//ch := make(chan int, 1)
+	//for i := 0; i < 10; i++ {
+	//	go func() {
+	//		ch <- i
+	//	}()
+	//}
+	//
+	//var wg sync.WaitGroup
+	//for i := 0; i < 10; i++ {
+	//	wg.Add(1)
+	//	go func(a int,ch chan int) {
+	//		//defer func() {
+	//		//	wg.Done()
+	//		//}()
+	//		fmt.Println(<-ch)
+	//	}(i,ch)
+	//}
+	//wg.Wait()
+	//
+
+	//c := make(chan int, 1)
+	//for i := 0; i < 1; i++ {
+	//	go func(i int) {
+	//		c <- 8
+	//	}(i)
+	//	time.Sleep(time.Second * 2)
+	//	if i == 0 {
+	//		close(c)
+	//	}
+	//}
+	//
+	//for i := 0; i < 3; i++ {
+	//	out, ok := <-c
+	//	fmt.Println(out,ok)
+	//}
+
+	//ch := make(chan int)
+	//ch <- 1
+	//var wg sync.WaitGroup
+	//for i:= 0; i < 1; i++ {
+	//	wg.Add(1)
+	//	go func(chan int, *sync.WaitGroup){
+	//		defer func(group *sync.WaitGroup){
+	//			wg.Done()
+	//		}(&wg)
+	//		out , ok :=  <- ch
+	//		fmt.Println(out , ok)
+	//	}(ch,&wg)
+	//	if i==0 {
+	//		close(ch)
+	//	}
+	//}
+	//wg.Wait()
+
+	//a := foo("hello")
+	//b := a.s + " world"
+	//c := b + "!"
+	//fmt.Println(c)
+
+	//var s = "abc"
+	//runes := reverse([]rune(s))
+	//fmt.Println(runes)
+	//fmt.Println(string(runes))
+
+	//var s1 []int
+	//s2 := make([]int,0)
+	//s4 := make([]int,0)
+	//s5 := make([]float64,0)
+	//fmt.Printf("%+v \n",*(*reflect.SliceHeader)(unsafe.Pointer(&s5)))
+	//fmt.Printf("s1 pointer:%+v, s2 pointer:%+v, s4 pointer:%+v, \n", *(*reflect.SliceHeader)(unsafe.Pointer(&s1)),*(*reflect.SliceHeader)(unsafe.Pointer(&s2)),*(*reflect.SliceHeader)(unsafe.Pointer(&s4)))
+	//fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s1))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data)
+	//fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s4))).Data)
+
+	//m1 := make(map[string]int)
+	//i,ok := m1["jack"]
+	//if ok {
+	//	fmt.Println(i)
+	//} else {
+	//	fmt.Println(i)	// 0
+	//}
+	//
+	//fmt.Println(m1["tom"])
+
+	//str := `sss`
+	//fmt.Println([]byte(str))
+
+	//var str string = "aaaa"
+	//var data []byte = []byte(str)
+	//fmt.Println(data)
+
+	//for i := 0; i < 3; i++ {
+	//	defer fmt.Println(i)
+	//}
+
+	//for i := 0; i < 3; i++ {
+	//	i := i
+	//	defer func() {
+	//		fmt.Println(i)
+	//	}()
+	//}
+
+	//fmt.Println(testDefer())
+
+	//s1 := []int{1, 2}
+	//fmt.Println(s1)
+	//fmt.Println(len(s1),cap(s1))
+	//s1 = append(s1, 1, 1,1)
+	//fmt.Println(len(s1),cap(s1))
+	//fmt.Println(s1)
+	//s1[0] = 99
+	//fmt.Println(s1)
+
+	//data := []int{1, 2, 3}
+	//for i, v := range data {
+	//	if i == 0 {
+	//		data[i] = 99
+	//    }
+	//	v *= 10  // data 中原有元素是不会被修改的
+	//}
+	//fmt.Println("data: ", data) // data:  [1 2 3]
+
+	//student := stStudent{stPeople{true, "222"}, 4}
+	//fmt.Println(student)
+	//f1(1,23,4)
+
+	//defer func() {
+	//	fmt.Println("recovered: ", recover())
+	//}()
+	//panic("not good")
+
+	//var data = []byte(`{"status": 200}`)
+	//var result map[string]interface{}
+	//
+	//if err := json.Unmarshal(data, &result); err != nil {
+	//
+	//}
+	//sprintf := fmt.Sprintf("%f", result["status"])
+	//fmt.Println(sprintf)
+
+	//x := "text"
+	//xBytes := []byte(x)
+	//xBytes[0] = 'T' // 注意此时的 T 是 rune 类型
+	//x = string(xBytes)
+	//fmt.Println(x) // Text
+
+	//s := md5s("15056671063")
+	//
+	//fmt.Print(len(s))
+	//fmt.Println()
+	//fmt.Print(s)
+
 	// a:= "\tgit.in.codoon.com/backend/common v0.0.0-20210412054509-7c9f3212a286"
 	//var slice []int
 	//slice[1] = 0
