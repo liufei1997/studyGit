@@ -405,13 +405,20 @@ func update(a []int) {
 	a = append(a, 1)
 }
 
+type intList []int
+
 func main() {
-	s1 := make([]int, 0)
-	s2 := []int{1,2,3}
-	update(s1)
-	update(s2)
-	fmt.Println(s1)
-	fmt.Println(s2)
+
+	var list intList = []int{1,2,3,4}
+	for i:= 0 ; i < len(list);i++{
+		
+	}
+	//s1 := make([]int, 0)
+	//s2 := []int{1,2,3}
+	//update(s1)
+	//update(s2)
+	//fmt.Println(s1)
+	//fmt.Println(s2)
 
 	//bytes := []byte("aaa")
 	//fmt.Println(string(bytes))
