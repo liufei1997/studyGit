@@ -409,10 +409,49 @@ type intList []int
 
 func main() {
 
-	var list intList = []int{1,2,3,4}
-	for i:= 0 ; i < len(list);i++{
-		
+	yesterdayEndTime, _ := time.ParseInLocation("2006-01-02", time.Now().Format("2006-01-02"), time.Now().Location())
+	yesterdayStartTime := yesterdayEndTime.Add(-24 * time.Hour)
+	// 例如 当前时间（time.Now()）是 2021-07-22 10:14:06  则 theDayBeforeYesterdayEndTime 为 2021-07-21 00:00:00 +0800 CST
+	// 如果该用户的  continue_end_time < theDayBeforeYesterdayEndTime 则说明该用户断签，
+	// 则将 此时的 group_sports_groupmember表记录迁移到 user_sign_in_history 表
+	theDayBeforeYesterdayEndTime := yesterdayStartTime
+	if time.Now().Before(theDayBeforeYesterdayEndTime) {
+		fmt.Println(1)
+	} else {
+		fmt.Println(2)
 	}
+
+	before := time.Now().Add(-1 * time.Millisecond).Before(time.Now())
+	fmt.Println(before)
+
+	//now := time.Now()
+	//location, err := time.ParseInLocation("2006-01-02", now.Format("2006-01-02"), time.Local)
+	//
+	//if err != nil{
+	//
+	//}
+	//fmt.Println(location)
+	//
+	//
+	//
+	//fmt.Println(time.Now().Local(),555)
+	//fmt.Println(!(time.Now().Local().IsZero()))
+
+	// startDate, _ := time.ParseInLocation("2006-01-02", time.Now().Local().Format("2006-01-02"), time.Local)
+	//
+	//fmt.Println(time.Now())
+	//yesterdayEndTime, _ := time.ParseInLocation("2006-01-02", time.Now().Format("2006-01-02"), time.Now().Location())
+	//yesterdayStartTime := yesterdayEndTime.Add(-24 * time.Hour)
+	//fmt.Println(yesterdayEndTime)
+	//fmt.Println(yesterdayStartTime)
+
+	//h := md5.New()
+	//h.Write([]byte("15390427825"))
+	//md5PhoneMun := fmt.Sprintf("%x", h.Sum(nil))
+	//fmt.Println(md5PhoneMun)
+
+	// (1<<TrainingPlatformBitPosEnd - 1) & ^(1 << TrainingPlatformBitPosMagicCustomer)
+
 	//s1 := make([]int, 0)
 	//s2 := []int{1,2,3}
 	//update(s1)
