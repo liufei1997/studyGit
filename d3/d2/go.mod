@@ -1,0 +1,1 @@
+module "studyGit/testCompress666"
